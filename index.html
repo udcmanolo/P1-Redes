@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica DNS - Éxito</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            border-top: 6px solid #28a745; /* Barra verde superior */
+        }
+        h1 {
+            color: #28a745;
+            margin-bottom: 10px;
+        }
+        .icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        .info-box {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-family: monospace;
+            font-size: 1.1em;
+            word-break: break-all;
+        }
+        p {
+            line-height: 1.6;
+            color: #666;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 0.85em;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="icon">✅</div>
+        <h1>¡Resolución Exitosa!</h1>
+        <p>Si estás viendo esta página, tu servidor DNS ha resuelto correctamente la dirección IP.</p>
+
+        <div class="info-box">
+            Dominio accedido:<br>
+            <strong id="domain-name">Cargando...</strong>
+        </div>
+
+        <p>Este servidor web está respondiendo a la petición solicitada.</p>
+
+        <div class="footer">
+            Práctica de Redes y Servicios<br>
+            Alumno: <strong>Tu Nombre Aquí</strong>
+        </div>
+    </div>
+
+    <script>
+        // Este script toma el dominio de la barra de direcciones y lo muestra en pantalla
+        document.getElementById('domain-name').textContent = window.location.hostname;
+    </script>
+
+</body>
+</html>
